@@ -12,12 +12,12 @@ body {
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
     margin: 0;
-    padding: 16px;
+    padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
-    width: 380px;
+    min-height: 400px;
+    width: 320px;
     overflow: hidden;
     position: relative;
 }
@@ -81,9 +81,9 @@ body {
     background: rgba(20, 20, 20, 0.4);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 20px;
+    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 24px;
+    padding: 16px;
     box-shadow: 
         0 8px 32px 0 rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.1),
@@ -132,9 +132,9 @@ body {
 h1 {
     text-align: center;
     color: #ffffff;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.5px;
     position: relative;
@@ -143,7 +143,8 @@ h1 {
 
 .password-display {
     display: flex;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 14px;
     position: relative;
     z-index: 10;
 }
@@ -154,7 +155,7 @@ h1 {
     border: none;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
-    border-radius: 10px 0 0 10px;
+    border-radius: 16px;
     font-size: 14px;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -207,8 +208,9 @@ h1 {
 
 .button-cards {
     display: flex;
-    gap: 4px;
-    margin-left: 6px;
+    gap: 2px;
+    margin-left: 4px;
+    flex-shrink: 0;
 }
 
 .button-card {
@@ -219,8 +221,11 @@ h1 {
     backdrop-filter: blur(15px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    min-width: 32px;
-    min-height: 32px;
+    width: 32px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-card:hover {
@@ -233,10 +238,10 @@ h1 {
     background: transparent;
     border: none;
     color: white;
-    padding: 4px 6px;
-    border-radius: 6px;
+    padding: 4px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 11px;
     transition: all 0.3s ease;
     width: 100%;
     height: 100%;
@@ -250,21 +255,36 @@ h1 {
     transform: scale(1.1);
 }
 
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.length-section {
+    margin-bottom: 12px;
     position: relative;
     z-index: 10;
 }
 
+.length-section label {
+    color: #e2e8f0;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 12px;
+}
+
 label {
     color: #e2e8f0;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     cursor: pointer;
     transition: color 0.3s ease;
     user-select: none;
@@ -275,8 +295,8 @@ label:hover {
 }
 
 input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     accent-color: #667eea;
     cursor: pointer;
 }
@@ -288,7 +308,7 @@ input[type="range"] {
     border-radius: 3px;
     outline: none;
     cursor: pointer;
-    margin: 8px 0;
+    margin: 4px 0 0 0;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -315,16 +335,16 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 #generate {
     width: 100%;
-    padding: 14px;
+    padding: 12px;
     background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 14px;
     transition: all 0.3s ease;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     position: relative;
@@ -359,8 +379,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 .footer {
-    margin-top: 20px;
-    padding-top: 16px;
+    margin-top: 14px;
+    padding-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     position: relative;
