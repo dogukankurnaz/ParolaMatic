@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+            <div class="button-cards">
+                <div class="button-card">
+                    <button id="regenerate-btn"><i class="fas fa-dice"></i></button>
+                </div>
+                <div class="button-card">
+                    <button id="copy-btn"><i class="fas fa-copy"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="options">
+            <label>Password Length: <span id="length-value">12</span></label>
+            <input type="range" id="length" min="4" max="32" value="12">
+            <label><input type="checkbox" id="easy-to-say"> Easy to say</label>
+            <label><input type="checkbox" id="easy-to-read"> Easy to read</label>
+            <label><input type="checkbox" id="all-characters" checked> All characters</label>
+            <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+            <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+            <label><input type="checkbox" id="numbers" checked> Numbers</label>
+            <label><input type="checkbox" id="symbols" checked> Symbols</label>
+        </div>
+        <button id="generate">Generate</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
