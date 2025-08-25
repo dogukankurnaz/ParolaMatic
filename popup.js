@@ -1,4 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Matrix rain effect
+    function createMatrixRain(containerId, charCount = 15, interval = 300) {
+        const matrixContainer = document.getElementById(containerId);
+        if (!matrixContainer) return;
+        
+        const characters = '&%+!?_QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890@#$^*()[]{}|;:,.<>/';
+        
+        function createChar() {
+            const char = document.createElement('div');
+            char.className = 'matrix-char';
+            char.textContent = characters[Math.floor(Math.random() * characters.length)];
+            char.style.left = Math.random() * 100 + '%';
+            char.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            char.style.animationDelay = Math.random() * 2 + 's';
+            
+            matrixContainer.appendChild(char);
+            
+            // Remove character after animation
+            setTimeout(() => {
+                if (char.parentNode) {
+                    char.parentNode.removeChild(char);
+                }
+            }, 5000);
+        }
+        
+        // Create initial characters
+        for (let i = 0; i < charCount; i++) {
+            setTimeout(createChar, i * 200);
+        }
+        
+        // Continue creating characters
+        setInterval(createChar, interval);
+    }
+    
+    // Start matrix effects
+    createMatrixRain('matrix-rain', 15, 300); // Background effect
+    createMatrixRain('matrix-rain-container', 8, 500); // Container effect (less dense)
     const passwordInput = document.getElementById('password');
     const generateBtn = document.getElementById('generate');
     const lengthSlider = document.getElementById('length');

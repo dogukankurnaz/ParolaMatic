@@ -1,11 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Password Generator",
+  "name": "ParolaMatic",
   "version": "1.0",
-  "description": "A simple password generator Chrome extension",
+  "description": "ParolaMatic - Modern ve güvenli şifre üretici Chrome extension",
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icon.svg"
+    "default_icon": "parolamaticicon.png"
+  },
+  "icons": {
+    "16": "parolamaticicon.png",
+    "48": "parolamaticicon.png",
+    "128": "parolamaticicon.png"
   },
   "permissions": ["clipboardWrite"]
 }
