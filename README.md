@@ -57,3 +57,10 @@ Bu, özelleştirilebilir seçenekler ve profesyonel glassmorphism UI teması ile
 - Kopyalamak için 'Kopyala' butonuna tıklayın.
 
 Herhangi bir bağımlılık gerektirmez.
+
+---
+
+## Project Members / Proje Üyeleri
+
+- **Enes Kavruk** - [GitHub](https://github.com/ekavruk)
+- **Doğukan Kurnaz** - [GitHub](https://github.com/dogukankurnaz)
